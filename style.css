@@ -1,0 +1,328 @@
+.header-top {
+    padding: 15px 0;
+    background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}/* ===== Custom Variables ===== */
+:root {
+    --primary-color: #0057a3;
+    --secondary-color: #6c757d;
+    --accent-color: #f0f0f0;
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --transition-speed: 0.3s;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ===== Global Styles ===== */
+  body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover {
+    color: darken(var(--primary-color), 10%);
+  }
+  
+  /* ===== Header ===== */
+  header {
+    background: linear-gradient(300deg,  #00bfff, #ff4c68, #ef8172);
+    color: #e6dfdf;
+    font-size: 0.9rem;
+  }
+  header i {
+    margin-right: 6px;
+  }
+  header span {
+    margin-right: 20px;
+    font-weight: 500;
+  }
+  
+  /* ===== Hero Section ===== */
+  section {
+    transition: background var(--transition-speed);
+  }
+  section h1 {
+    color: var(--primary-color);
+  }
+  section .lead {
+    color: var(--secondary-color);
+  }
+  section img {
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== Navigation ===== */
+  nav {
+    background-color: var(--primary-color) !important;
+  }
+  nav .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: background var(--transition-speed);
+  }
+  nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+  }
+  
+  /* ===== Buttons ===== */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+  .btn-outline-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+  }
+  .btn-outline-secondary:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+  }
+  
+  /* ===== Footer ===== */
+  footer {
+    background-color: #f8f9fa;
+    color: #6c757d;
+  }
+  footer h5 {
+    font-weight: bold;
+  }
+  footer ul {
+    padding-left: 0;
+    list-style: none;
+  }
+  footer ul li {
+    margin-bottom: 0.5rem;
+  }
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===== Animations ===== */
+  @keyframes fadeInUp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  section .row > div {
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  /* ===== Media Queries ===== */
+  @media (max-width: 768px) {
+    header .container {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  
+    nav .nav {
+      flex-direction: column;
+    }
+  
+    section h1 {
+      font-size: 2rem;
+    }
+  }
+  /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container for the entire page */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Career Section Styling */
+.career-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.career-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Career Opportunities List */
+.career-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.career-list .job-item {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-list .job-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.job-item h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.job-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.job-item a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.job-item a:hover {
+    background-color: #0056b3;
+}
+
+/* Application Form Styling */
+.application-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.application-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.application-form .form-group {
+    margin-bottom: 20px;
+}
+
+.application-form .form-group label {
+    font-size: 1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.application-form .form-group input,
+.application-form .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.application-form .form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.application-form button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.application-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .career-list {
+        grid-template-columns: 1fr;
+    }
+
+    .application-form {
+        padding: 20px;
+    }
+
+    .career-section h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .career-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .application-form button[type="submit"] {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
